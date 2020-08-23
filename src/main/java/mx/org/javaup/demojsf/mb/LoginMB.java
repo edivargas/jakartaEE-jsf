@@ -20,12 +20,20 @@ import mx.org.javaup.demojsf.bean.User;
 @Data
 public class LoginMB implements Serializable {
     
-    private User user; 
+    private User user = new User(); 
 
     /**
      * Creates a new instance of Login
      */
     public LoginMB() {
+    }
+    
+    public String login() {
+        return "Menu";
+    }
+    
+    public String cancel() {
+        return null;
     }
     
 }
