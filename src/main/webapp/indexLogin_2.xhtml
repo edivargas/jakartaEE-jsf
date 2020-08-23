@@ -12,14 +12,15 @@
 
     <ui:define name="content">
         <h:form id="loginForm">
-            <p:panelGrid columns="2" class="center-all">
-                <p:outputLabel id="userLabel" value="User" />
-                <p:inputText id="user" value="#{loginMB.user.login}" />
-                <p:outputLabel id="passwordLabel" value="Password" />
-                <p:inputText id="password" value="#{loginMB.user.password}" />
-                <p:commandButton id="loginButtonNative" value="Login" action="#{loginMB.login}" />
-                <p:commandButton id="cancelButton" value="Cancel" action="#{loginMB.cancel}" onclick='alert("Esto es una alerta");' />
-            </p:panelGrid>
+            <h:outputLabel id="userLabel" value="User" />
+            <h:inputText id="user" value="#{loginMB.user.login}" />
+            <br/>
+            <h:outputLabel id="passwordLabel" value="Password" />
+            <h:inputText id="password" value="#{loginMB.user.password}" />
+            <br/>
+            <h:commandButton id="loginButtonNative" value="Login" action="#{loginMB.login}" />
+            <h:commandButton id="cancelButton" value="Cancel" action="#{loginMB.cancel}" onclick='alert("Esto es una alerta");' />
+
         </h:form> 
     </ui:define>
 

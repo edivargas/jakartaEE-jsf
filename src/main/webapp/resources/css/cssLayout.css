@@ -5,6 +5,7 @@
     color: white;
     padding: 5px;
     margin: 0px 0px 10px 0px;
+    min-height: 100px;
 }
 
 #bottom {
@@ -16,16 +17,17 @@
 
 #left {
     float: left;
-    background-color: #ece3a5;
+    background-color: #BBBBBB;
     padding: 5px;
-    width: 150px;
+    width: 300px;
+    height: 100%;
 }
 
 #right {
     float: right;
     background-color: #ece3a5;
     padding: 5px;
-    width: 150px;
+    width: 250px;
 }
 
 .center_content {
@@ -37,7 +39,11 @@
 .left_content {
     background-color: #dddddd;
     padding: 5px;
-    margin-left: 170px;
+    margin: 0px 0px 10px 0px;
+    margin-left: 300px;
+    height: 100%;
+    align-content: center;
+    vertical-align: top;
 }
 
 .right_content {
@@ -46,16 +52,21 @@
     margin: 0px 170px 0px 170px;
 }
 
+.center-all {
+    align-content: center;
+    vertical-align: top;
+}
+
 #top a:link, #top a:visited {
-  color: white;
-  font-weight : bold;
-  text-decoration: none;
+    color: white;
+    font-weight : bold;
+    text-decoration: none;
 }
 
 #top a:link:hover, #top a:visited:hover  {
-  color: black;
-  font-weight : bold;
-  text-decoration : underline;
+    color: black;
+    font-weight : bold;
+    text-decoration : underline;
 }
 
 

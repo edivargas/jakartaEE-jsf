@@ -15,21 +15,22 @@ import mx.org.javaup.demojsf.bean.User;
  *
  * @author edivargas
  */
-@Named(value = "loginMB") 
+@Named(value = "loginMB")
 @SessionScoped
 @Data
 public class LoginMB implements Serializable {
-    
-    private User user = new User(); 
+
+    private User user = new User();
 
     /**
      * Creates a new instance of Login
      */
     public LoginMB() {
     }
-    
+
     public String login() {
-        return "Menu";
+        System.out.println("Entrando al Login");
+        return "menu";
     }
     
     public String cancel() {
