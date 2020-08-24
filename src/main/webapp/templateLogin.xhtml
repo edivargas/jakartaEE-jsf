@@ -9,18 +9,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet library="css" name="default.css"/>
         <h:outputStylesheet library= "css" name="cssLayout.css"/>
-        <title>Facelets Template</title>
     </h:head>
-
     <h:body>
         <div id="top" class="top">
-            <ui:insert name="top">Esto es el top de la página</ui:insert>
+            <p:panelGrid columns="3" style="width: 100%;"
+                         columnClasses="logo,top-label,top-label-user">
+                <h:graphicImage id="logo" library="images" 
+                                name="javaup.png"  styleClass="logo"/>
+                <h:outputText id="topLabelCenter" 
+                              value="Super Sistema en JSF/JakartaEE de JavaUP" 
+                              styleClass="top-label"/>
+                <h:outputText id="topLabelRight" 
+                              value="Bienvenido #{loginMB.user.name}" 
+                              styleClass="top-label-user"/>
+            </p:panelGrid>
         </div>
         <div style="height: 100%;">
-            <div id="left">
-                <ui:insert name="left">Seccion Izquierda</ui:insert>
-            </div>
-            <div id="content" class="left_content">
+            <div id="content" class="center_content">
                 <ui:insert name="content">Seccion Central</ui:insert>
                 <p:growl showDetail="true">
                     <p:autoUpdate />

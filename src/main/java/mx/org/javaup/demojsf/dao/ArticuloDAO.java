@@ -28,4 +28,7 @@ public class ArticuloDAO {
                 Articulo.class).getResultList();
     }
 
+    public Articulo getById(Integer idArticulo) {
+        return em.find(Articulo.class, idArticulo);
+    }
 }

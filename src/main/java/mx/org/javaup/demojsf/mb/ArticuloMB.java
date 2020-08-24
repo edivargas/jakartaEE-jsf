@@ -33,6 +33,10 @@ public class ArticuloMB {
     public ArticuloMB() {
     }
     
+    public String preparaAgregar() {
+        return "agrega";
+    }
+    
     public String consulta() {
         articulos.clear();
         articulos.addAll(articuloDAO.getAll());
