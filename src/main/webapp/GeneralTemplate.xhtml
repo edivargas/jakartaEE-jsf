@@ -22,7 +22,9 @@
             </div>
             <div id="content" class="left_content">
                 <ui:insert name="content">Seccion Central</ui:insert>
-                <p:messages />
+                <p:growl showDetail="true">
+                    <p:autoUpdate />
+                </p:growl>            
             </div>
         </div>
     </h:body>

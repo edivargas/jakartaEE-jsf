@@ -8,8 +8,10 @@ package mx.org.javaup.demojsf.mb;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import javax.ejb.EJB;
 import lombok.Data;
 import mx.org.javaup.demojsf.bean.User;
+import mx.org.javaup.demojsf.ejb.AdminEJB;
 
 /**
  *
@@ -19,6 +21,9 @@ import mx.org.javaup.demojsf.bean.User;
 @SessionScoped
 @Data
 public class LoginMB implements Serializable {
+    
+    @EJB
+    AdminEJB adminEJB;
 
     private User user = new User();
 
@@ -30,11 +35,13 @@ public class LoginMB implements Serializable {
 
     public String login() {
         System.out.println("Entrando al Login");
-        return "menu";
+        if (adminEJB.isAllowed(user)) {
+            return "menu";
+        } 
+        return "indexLogin";
     }
     
     public String cancel() {
         return null;
     }
-    
 }

@@ -28,7 +28,6 @@ import javax.validation.constraints.Size;
 @NamedQueries({
     @NamedQuery(name = "Articulo.findAll", query = "SELECT a FROM Articulo a"),
     @NamedQuery(name = "Articulo.findByIdArticulo", query = "SELECT a FROM Articulo a WHERE a.idArticulo = :idArticulo"),
-    @NamedQuery(name = "Articulo.findByNombre", query = "SELECT a FROM Articulo a WHERE a.nombre = :nombre"),
     @NamedQuery(name = "Articulo.findByDescripcion", query = "SELECT a FROM Articulo a WHERE a.descripcion = :descripcion"),
     @NamedQuery(name = "Articulo.findByPrecio", query = "SELECT a FROM Articulo a WHERE a.precio = :precio")})
 public class Articulo implements Serializable {
@@ -42,8 +41,8 @@ public class Articulo implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
-    @Column(name = "NOMBRE")
-    private String nombre;
+    @Column(name = "SKU")
+    private String sku;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
@@ -64,7 +63,7 @@ public class Articulo implements Serializable {
 
     public Articulo(Integer idArticulo, String nombre, String descripcion, BigDecimal precio) {
         this.idArticulo = idArticulo;
-        this.nombre = nombre;
+        this.sku = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
     }
@@ -77,12 +76,12 @@ public class Articulo implements Serializable {
         this.idArticulo = idArticulo;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getSku() {
+        return sku;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setSku(String sku) {
+        this.sku = sku;
     }
 
     public String getDescripcion() {

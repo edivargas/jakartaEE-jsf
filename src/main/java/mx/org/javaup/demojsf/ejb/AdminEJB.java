@@ -16,6 +16,7 @@ import mx.org.javaup.demojsf.bean.User;
 public class AdminEJB {
 
     public boolean isAllowed(User user) {
+        System.out.println("Desde el EJB");
         return true;
     }
 
